@@ -2,7 +2,7 @@
 {{ if .Site.Params.features.enable }}
 {{ if isset .Site.Data "features" }}
 {{ if gt (len .Site.Data.features) 0 }}
-<section class="bar background-white">
+<section class="bar background-image-fixed-2 no-mb color-white text-center">
     <div class="container">
         {{ $elements := default 3 .Site.Params.features.cols }}
         {{ $features := sort .Site.Data.features "weight" }}
@@ -40,6 +40,21 @@
             {{ end }}
           </div>
         {{ end }}
+
+        <div class="row">
+            <p class="text-center">
+                {{ with .Site.Params.features.link_url }}
+                <a href="{{ . }}" class="btn btn-template-primary btn-lg">
+                {{ end }}
+                    {{ with .Site.Params.features.link_text }}
+                    {{ . | markdownify }}
+                    {{ end }}
+                {{ with .Site.Params.features.link_url }}
+                </a>
+                {{ end }}
+            </p>
+        </div>
+        
     </div>
 </section>
 {{ end }}
