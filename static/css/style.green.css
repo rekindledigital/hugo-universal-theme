@@ -485,7 +485,7 @@ ul.list-style-none {
 }
 .navbar-affixed-top {
   top: 0;
-  z-index: 1000;
+  z-index: 1; /* Change to 1 to prevent gallery view breaking*/ 
   width: 100%;
 }
 .navbar-affixed-top.affix {
