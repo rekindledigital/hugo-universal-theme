@@ -97,6 +97,7 @@ _________________________________________________________ -->
 
 <!-- *** COPYRIGHT END *** -->
 
+{{ if isset .Site.Params "fb_page_id" }}
 <!-- 
     Facebook Chat Plugin
  -->
@@ -110,7 +111,7 @@ _________________________________________________________ -->
 
  <script>
    var chatbox = document.getElementById('fb-customer-chat');
-   chatbox.setAttribute("page_id", "131252103202961");
+   chatbox.setAttribute("page_id", "{{ .Site.Params.copyright | safeHTML }}");
    chatbox.setAttribute("attribution", "biz_inbox");
  </script>
 
@@ -131,3 +132,4 @@ _________________________________________________________ -->
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
  </script>
+ {{ end }}
