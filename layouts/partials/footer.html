@@ -111,7 +111,7 @@ _________________________________________________________ -->
 
  <script>
    var chatbox = document.getElementById('fb-customer-chat');
-   chatbox.setAttribute("page_id", "{{ .Site.Params.copyright | safeHTML }}");
+   chatbox.setAttribute("page_id", "{{ .Site.Params.fb_page_id | safeHTML }}");
    chatbox.setAttribute("attribution", "biz_inbox");
  </script>
 
