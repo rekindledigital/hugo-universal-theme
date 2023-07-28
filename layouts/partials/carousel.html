@@ -19,8 +19,8 @@
                                 <h1>{{ .title | safeHTML }}</h1>
                                 {{ .description | safeHTML }}
                             </div>
-                            <div class="col-sm-7">
-                                <img class="img-responsive" src="{{ .image }}" alt="">
+                            <div class="col-sm-7"  >
+                                <img style="max-height: 360px" class="img-responsive" src="{{ .image }}" alt="">
                             </div>
                         </div>
                     {{ if .href }}
